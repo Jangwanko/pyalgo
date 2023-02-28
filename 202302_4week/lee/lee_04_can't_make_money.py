@@ -7,7 +7,7 @@ for i in money:
     if target < i:
         break
     else:
-        target += 1
+        target += i
 
 print(target)
 
