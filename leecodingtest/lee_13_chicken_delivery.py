@@ -21,6 +21,13 @@ for i in range(n):
             chick.append([i, j])
             # 치킨집의 위치 찾기.
 
+# 0 0 1 0 0
+# 0 0 2 0 1
+# 0 1 2 0 0
+# 0 0 1 0 0 
+# 0 0 0 0 2
+
+
 for chi in combinations(chick, m):
     # 각 치킨집의 위치 탐색.
     temp = 0
