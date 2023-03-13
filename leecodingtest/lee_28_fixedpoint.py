@@ -13,33 +13,34 @@
 def binary_search(array, start, end):
     if start > end:
         return None
-    #입력된 갯수의 오류.
+    # 입력된 갯수의 오류.
     mid = (start+end)//2
-    
+
     if array[mid] == mid:
         return mid
-    #고정점 리턴.
-    
+    # 고정점 리턴.
+
     elif array[mid] > mid:
         return binary_search(array, start, mid-1)
-    #이진트리 왼쪽부터 검색.
-    
+    # 왼쪽으로 검색.
+
     else:
         return binary_search(array, mid+1, end)
-    #이진트리 오른쪽부터 검색.
+    # 오른쪽으로 검색.
+
 
 n = int(input())
 array = list(map(int, input().split()))
-
 index = binary_search(array, 0, n-1)
-#함수에 0,n-1을 넣는것은 for문 사용과 유사한 방법.
+#
+
 
 if index == None:
     print(-1)
-#고정점 없음.
+# 고정점 없음.
 else:
     print(index)
-#고정점 출력.
+# 고정점 출력.
 
 # 진행예시
 # n=5로, array=[-15,-6,1,3,7]로 넣을경우.
